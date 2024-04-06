@@ -1,7 +1,8 @@
 <?php
+
     /*
-        Name:   Ohayi Chinyere
-        Mat No: HD2022/07579/1/CS
+        Name:   Akuegbe Williams
+        Mat No: HD2022/07544/1/CS
     */
 
     // Set the custom database name
@@ -13,6 +14,7 @@
     // Initialize variables
     $username = $password = '';
     $username_err = $password_err = '';
+    $success_message = ''; // New
 
     // Check if the connection is successful
     if ($conn) {
@@ -87,7 +89,9 @@
         $conn->close();
     } else {
         // Connection failed
-        die("Connection failed: " . mysqli_connect_error());
+        $error_message = "Connection failed: " . mysqli_connect_error();
     }
 
+    // Load the login form page with error/success messages
+    include 'login.php';
 ?>
