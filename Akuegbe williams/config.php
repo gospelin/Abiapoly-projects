@@ -12,7 +12,7 @@
     if (isset($custom_dbname) && !empty($custom_dbname)) {
         $dbname = $custom_dbname;
     } else {
-        $dbname = "mysql"; // Change this to your default database name
+        $dbname = "mysqli"; // Change this to your default database name
     }
 
     // Create connection
